@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import { toStars } from '../helpers/utils';
 import { getClient } from '../helpers/client';
-import { toBase64 } from 'cosmwasm';
+import { toBase64 } from '@cosmjs/encoding';
 import { toUtf8 } from '@cosmjs/encoding';
 import { InstantiateMsg as SplitsInstantiateMsg } from '@stargazezone/launchpad/src/Splits.types';
 

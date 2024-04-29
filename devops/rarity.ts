@@ -5,7 +5,7 @@
 
 // ex: yarn devops-rarity
 
-import { CosmWasmClient } from 'cosmwasm';
+import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate';
 const fetch = require('node-fetch');
 const config = require('../config');
 require('dotenv').config();

@@ -4,7 +4,7 @@
 // Shuffling can act as a countermeasure against rarity snipers.
 // Shuffle Fee is meant to be controlled by governance proposal. It is currently hardcoded to 500 stars.
 
-import { coins } from 'cosmwasm';
+import { coins } from '@cosmjs/amino';
 import { toStars } from '../../helpers/utils';
 import { getClient } from '../../helpers/client';
 
