@@ -1,7 +1,8 @@
 // Update metadata for token ids using metadata.csv
 // Requires the collection is sg721-updatable contract
 
-import { MsgExecuteContractEncodeObject, toUtf8 } from 'cosmwasm';
+import { MsgExecuteContractEncodeObject } from '@cosmjs/cosmwasm-stargate';
+import { toUtf8 } from '@cosmjs/encoding';
 import { MsgExecuteContract } from 'cosmjs-types/cosmwasm/wasm/v1/tx';
 import inquirer from 'inquirer';
 import { assertIsDeliverTxSuccess } from '@cosmjs/stargate';

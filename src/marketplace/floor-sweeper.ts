@@ -6,7 +6,10 @@ import { toStars } from '../helpers/utils';
 const config = require('../../config');
 import inquirer from 'inquirer';
 import { getClient } from '../helpers/client';
-import { coin, MsgExecuteContractEncodeObject, toUtf8 } from 'cosmwasm';
+import { MsgExecuteContractEncodeObject } from '@cosmjs/cosmwasm-stargate';
+import { coin } from '@cosmjs/amino';
+import { toUtf8 } from '@cosmjs/encoding';
+
 import { MsgExecuteContract } from 'cosmjs-types/cosmwasm/wasm/v1/tx';
 import { assertIsDeliverTxSuccess } from '@cosmjs/stargate';
 

@@ -8,7 +8,8 @@
 // Accepts cosmos, stars addresses.
 
 import { ExecuteMsg } from '@stargazezone/types/contracts/minter/execute_msg';
-import { coin, MsgExecuteContractEncodeObject } from 'cosmwasm';
+import { coin } from '@cosmjs/amino';
+import { MsgExecuteContractEncodeObject } from '@cosmjs/cosmwasm-stargate';
 import { toStars } from '../../helpers/utils';
 import inquirer from 'inquirer';
 import { getClient } from '../../helpers/client';

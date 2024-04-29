@@ -1,4 +1,6 @@
-import { MsgExecuteContractEncodeObject, coins, toUtf8, Coin } from 'cosmwasm';
+import { MsgExecuteContractEncodeObject } from '@cosmjs/cosmwasm-stargate';
+import { coins, Coin } from '@cosmjs/amino';
+import { toUtf8 } from '@cosmjs/encoding';
 import { MsgExecuteContract } from 'cosmjs-types/cosmwasm/wasm/v1/tx';
 import { getClient } from '../../helpers/client';
 import { isValidIpfsUrl, toStars } from '../../helpers/utils';
@@ -248,7 +250,7 @@ async function format_funds(funds: Coin) {
 
 const args = process.argv.slice(2);
 if (args.length == 0) {
-  console.log('No arguments provided, need --to or --for');
+  console.log('No arguments provided, need --to, --for or --token-uri');
 } else if (args.length == 1 && args[0] == '--test-whitelist') {
   test_whitelist();
 } else if (args.length == 2 && args[0] == '--to') {

@@ -1,9 +1,5 @@
-import {
-  encodeSecp256k1Pubkey,
-  Secp256k1HdWallet,
-  Bip39,
-  Random,
-} from 'cosmwasm';
+import { Bip39, Random } from '@cosmjs/crypto';
+import { Secp256k1HdWallet, encodeSecp256k1Pubkey } from '@cosmjs/amino';
 
 async function createAccount() {
   const mnemonic = Bip39.encode(Random.getBytes(16)).toString();

@@ -3,7 +3,7 @@
 // If you run into an error with `member_limit`, run `yarn whitelist --increase-member-limit`
 
 import { ExecuteMsg } from '@stargazezone/types/contracts/whitelist/execute_msg';
-import { MsgExecuteContractEncodeObject } from 'cosmwasm';
+import { MsgExecuteContractEncodeObject } from '@cosmjs/cosmwasm-stargate';
 import { toStars } from '../helpers/utils';
 import inquirer from 'inquirer';
 import { getClient } from '../helpers/client';

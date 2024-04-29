@@ -6,7 +6,7 @@
 
 // Accepts cosmos, stars addresses.
 
-import { coin, MsgExecuteContractEncodeObject } from 'cosmwasm';
+import { MsgExecuteContractEncodeObject } from '@cosmjs/cosmwasm-stargate';
 import { toStars } from '../../helpers/utils';
 import { getClient } from '../../helpers/client';
 import inquirer from 'inquirer';

@@ -3,7 +3,7 @@
 // Queries AsksSortedByPrice
 // Outputs to console as csv
 
-import { CosmWasmClient } from 'cosmwasm';
+import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate';
 import { toStars } from '../helpers/utils';
 const config = require('../../config');
 const fetch = require('node-fetch');

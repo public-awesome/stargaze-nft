@@ -2,7 +2,7 @@ import { getClient } from '../../helpers/client';
 import { toStars } from '../../helpers/utils';
 import inquirer from 'inquirer';
 import { mintTo } from './mint';
-import { SigningCosmWasmClient } from 'cosmwasm';
+import { SigningCosmWasmClient } from '@cosmjs/cosmwasm-stargate';
 
 const config = require('../../../config');
 const BATCH_BURN_LIMIT = 50;

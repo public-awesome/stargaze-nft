@@ -1,4 +1,4 @@
-import { toBech32, fromBech32 } from 'cosmwasm';
+import { toBech32, fromBech32 } from '@cosmjs/encoding';
 const config = require('../../config');
 
 export const toStars = (addr: string) => {

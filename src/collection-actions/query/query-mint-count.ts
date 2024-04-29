@@ -1,4 +1,4 @@
-import { CosmWasmClient } from 'cosmwasm';
+import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate';
 import { toStars } from '../../helpers/utils';
 
 import * as fs from 'fs';

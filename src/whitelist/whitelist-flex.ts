@@ -1,7 +1,7 @@
 import { InstantiateMsg } from '@stargazezone/types/contracts/whitelist/instantiate_msg';
 import { ExecuteMsg } from '@stargazezone/types/contracts/whitelist/execute_msg';
 import { Timestamp } from '@stargazezone/types/contracts/minter/shared-types';
-import { coins } from 'cosmwasm';
+import { coins } from '@cosmjs/amino';
 import inquirer from 'inquirer';
 import { toStars } from '../helpers/utils';
 import { getClient } from '../helpers/client';

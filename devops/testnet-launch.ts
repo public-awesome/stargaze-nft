@@ -55,7 +55,7 @@ const collection3 = require('./collection3');
 import { create_minter as create_minter } from '../src/create-collection/minter';
 import { batchMint } from '../src/collection-actions/execute/mint';
 import { toStars } from '../src/helpers/utils';
-import { CosmWasmClient } from 'cosmwasm';
+import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate';
 import { naturalCompare } from '../src/helpers/sort';
 
 // Define constants to use for launch. overrides config.js

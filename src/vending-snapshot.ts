@@ -1,4 +1,4 @@
-import { CosmWasmClient } from 'cosmwasm';
+import { CosmWasmClient } from '@cosmjs/cosmwasm-stargate';
 import { appendFileSync } from 'fs';
 
 const config = require('../config');

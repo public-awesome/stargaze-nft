@@ -1,5 +1,6 @@
 import { CreateMinterMsgForNullable_Empty } from '@stargazezone/launchpad/src/BaseMinter.types';
-import { coins, Decimal } from 'cosmwasm';
+import { coins } from '@cosmjs/amino';
+import { Decimal } from '@cosmjs/math';
 import inquirer from 'inquirer';
 import { getClient } from '../helpers/client';
 import {
@@ -113,15 +114,15 @@ export async function create_minter() {
     'The `wasm` event emitted by the contract execution:',
     wasmEvent
   );
+  console.info('Tx Hash: ', result.transactionHash);
   if (wasmEvent != undefined) {
     console.info('Add these contract addresses to config.js:');
-    console.info('factory address: ', wasmEvent.attributes[0]['value']);
-    console.info('minter address: ', wasmEvent.attributes[2]['value']);
+    console.info('Minter address: ', result.logs[0].events[16].attributes[0].value);
     console.info(
-      'collection contract address: ',
-      wasmEvent.attributes[7]['value']
+      'Collection contract address: ',
+      result.logs[0].events[18].attributes[0].value
     );
-    return wasmEvent.attributes[2]['value'];
+    return result.logs[0].events[16].attributes[0].value;
   }
 }
 

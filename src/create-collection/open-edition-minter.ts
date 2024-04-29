@@ -1,5 +1,6 @@
 import { Timestamp } from '@stargazezone/launchpad/src/VendingMinter.types';
-import { coins, Decimal } from 'cosmwasm';
+import { coins } from '@cosmjs/amino';
+import { Decimal } from '@cosmjs/math';
 import inquirer from 'inquirer';
 import { getClient } from '../helpers/client';
 import {
@@ -213,12 +214,12 @@ export async function create_minter(params: OpenEditionMinterParams) {
     'The `wasm` event emitted by the contract execution:',
     wasmEvent
   );
+  console.info('Tx Hash: ', result.transactionHash);
   if (wasmEvent != undefined) {
     console.info('You may add these contract addresses to config.js to perform actions for the collection:');
-    console.info('Open Edition Factory address: ', wasmEvent.attributes[0]['value']);
-    console.info('Open Edition Minter address: ', wasmEvent.attributes[2]['value']);
-    console.info('sg721 contract address: ', wasmEvent.attributes[7]['value']);
-    return wasmEvent.attributes[2]['value'];
+    console.info('Open Edition Minter address: ', result.logs[0].events[16].attributes[0].value);
+    console.info('Collection contract address: ', result.logs[0].events[18].attributes[0].value);
+    return result.logs[0].events[16].attributes[0].value;
   }
 }
 

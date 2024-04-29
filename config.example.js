@@ -16,7 +16,7 @@ module.exports = {
   // NFT.storage endpoint
   nftStorageEndpoint: 'https://api.nft.storage',
   // NFT.storage API key
-  nftStorageApiKey: '',
+  nftStorageApiKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDJBODk5OGI4ZkE2YTM1NzMyYmMxQTRDQzNhOUU2M0Y2NUM3ZjA1RWIiLCJpc3MiOiJuZnQtc3RvcmFnZSIsImlhdCI6MTY1NTE5MTcwNDQ2MiwibmFtZSI6IlRlc3QifQ.IbdV_26bkPHSdd81sxox5AoG-5a4CCEY4aCrdbCXwAE',
   // Pinata API Key (optional)
   pinataApiKey: '',
   // Pinata Secret Key (optional)
