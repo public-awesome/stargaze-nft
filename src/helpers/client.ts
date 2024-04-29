@@ -1,8 +1,9 @@
 import {
   SigningCosmWasmClient,
-  DirectSecp256k1HdWallet,
-  GasPrice,
-} from 'cosmwasm';
+} from '@cosmjs/cosmwasm-stargate';
+
+import { DirectSecp256k1HdWallet } from '@cosmjs/proto-signing';
+import { GasPrice } from '@cosmjs/stargate';
 import inquirer from 'inquirer';
 
 import { isValidHttpUrl } from './utils';

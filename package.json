@@ -3,14 +3,18 @@
   "version": "0.8.2",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@stargazezone/launchpad": "^2.3.3",
-    "@stargazezone/types": "^0.9.0",
+    "@stargazezone/launchpad": "3.4.0",
+    "@stargazezone/types": "0.9.0",
     "@types/inquirer": "^8.2.0",
-    "@types/mime": "^2.0.3",
-    "cosmwasm": "^1.0.2"
+    "@types/mime": "^2.0.3"
   },
   "dependencies": {
-    "@cosmjs/encoding": "^0.29.1",
+    "@cosmjs/amino": "0.32.2",
+    "@cosmjs/cosmwasm-stargate": "0.32.2",
+    "@cosmjs/encoding": "0.32.2",
+    "@cosmjs/proto-signing": "0.32.2",
+    "@cosmjs/stargate": "0.32.2",
+    "cosmjs-types": "0.9.0",
     "@pinata/sdk": "^1.1.23",
     "csv-parse": "^5.0.4",
     "files-from-path": "^0.2.3",
@@ -19,7 +23,7 @@
     "mime": "^3.0.0",
     "nft.storage": "^6.0.0",
     "node-fetch": "2.6.1",
-    "ts-node": "^10.5.0",
+    "ts-node": "10.9.2",
     "typescript": "^4.5.5"
   },
   "scripts": {
